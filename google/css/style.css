@@ -3,13 +3,21 @@
     --text: #e8eaf2;
     --line: #444746;
     --header-height: 60px;
-    --footer-height: 143px;
 }
 
 html, body{
     margin: 0;
     padding: 0;
+    color: var(--text);
     font-family: Arial, sans-serif;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    color: var(--text);
+    background-color: var(--background);
 }
 
 header{
@@ -17,92 +25,25 @@ header{
     margin: 0;
     padding: 6px;
     height: var(--header-height);
-    background-color: var(--background);
-    color: var(--text);
     align-items: center;
     justify-content: space-between;
 }
 
 main{
-    display: flex;
+    flex-grow: 1;
     justify-content: center;
     margin: 0;
     padding: 0;
-    height: calc(100vh - (var(--header-height) + var(--footer-height)));
-    background-color: var(--background);
-    color: var(--text);
 }
 
 footer{
     display: flex;
     flex-direction: column;
-    margin: 0;
-    padding: 0;
-    justify-content: space-between;
-    height: var(--footer-height);
-    background-color: var(--background);
-    color: var(--text);
-}
-
-.top-right{
-    display: flex;
-    flex-grow: 1;
-    align-items: center;
-    justify-content: center;
-}
-
-a{
-    font-size: 14px;
-    color: var(--text);
-    text-decoration: none;
-}
-
-footer a{
-    padding: 15px;
-}
-
-a:visited{
-    color: var(--text);
-}
-
-.left-header, .right-header{
-    display: flex;
-    height: 100%;
-    align-items: center;
-    justify-content: center;
-}
-
-.top-footer{
-    padding: 15px 30px;
-    font-size: 15px;
-    justify-content: center;
-    border-bottom: 0.8px solid var(--line);
-}
-
-.bottom-footer{
-    display: flex;
-    height: 100%;
     flex-wrap: wrap;
-    font-size: 14px;
-    justify-content: space-between;
-}
-
-#climat{
-    display: inline-flex;
-    font-size: 14px;
+    position: fixed;
+    bottom: 0;
     width: 100%;
-    align-items: center;
-    justify-content: center;
-}
-
-#climat p{
     margin: 0;
     padding: 0;
-}
-
-#climat img{
-    margin: 0;
-    padding: 0;
-    height: 14px;
-    margin-right: 3px;
+    justify-content: space-between;
 }
