@@ -2,7 +2,6 @@
     --background: #22242a;
     --text: #e8eaf2;
     --line: #444746;
-    --header-height: 60px;
 }
 
 html, body{
@@ -21,17 +20,27 @@ body{
 }
 
 header{
-    display: flex;
     margin: 0;
     padding: 6px;
-    height: var(--header-height);
+}
+
+nav{
+    display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-left: 10px;
+}
+
+nav a{
+    margin: 0 5px;
+    padding: 5px;
 }
 
 main{
+    display: flex;
+    flex-direction: column;
     flex-grow: 1;
-    justify-content: center;
+    align-items : center;
     margin: 0;
     padding: 0;
 }
@@ -46,4 +55,71 @@ footer{
     margin: 0;
     padding: 0;
     justify-content: space-between;
+}
+
+#links{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0 11px 0 0;
+}
+
+#links a{
+    padding: 0 0 0 15px;
+}
+
+#tools{
+    position: relative;
+    width: 48px;
+    height: 48px;
+}
+
+#tools img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 12px;
+    width: 24px;
+    height: 24px;
+}
+
+#profile{
+    position: relative;
+    width: 48px;
+    height: 48px;
+}
+
+#profile img{
+    width: 32px;
+    height: 32px;
+    border-radius: 16px;
+    position: absolute;
+    top: 8px;
+    left: 8px;
+}
+
+a{
+    font-size: 14px;
+    color: var(--text);
+    text-decoration: none;
+}
+
+.top-right a{
+    font-size: 13px;
+    margin: 0;
+    padding: 0;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+.top-right{
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    justify-content: flex-end;
+    align-items: center;
 }
