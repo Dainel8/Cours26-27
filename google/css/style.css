@@ -2,7 +2,18 @@
     --background: #22242a;
     --text: #e8eaf2;
     --line: #444746;
-    --search-bar: #303134;
+    --search-bar: #363840;
+    --search-line: #4d5156;
+}
+
+@media (prefers-color-scheme: light){
+    :root{
+        --background: #fff;
+        --text: #16171a;
+        --line: #d2d2d2;
+        --search-bar: #fff;
+        --search-line: #dadce0;
+    }
 }
 
 html, body{
@@ -150,9 +161,13 @@ footer a{
 }
 
 #climat{
+    order: 2;
     display: flex;
     flex-direction: row;
-    width: 100%;
+    @media (max-width: 1650px) {
+        width: 100%;
+        order: 0;
+    }
     justify-content: center;
     align-items: center;
 }
@@ -160,11 +175,11 @@ footer a{
 #climat a{
     display: flex;
     flex-direction: row;
-    white-space: nowrap;
-    height: 18px;
+    height: 17px;
 }
 
 #links2{
+    order: 1;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -172,6 +187,7 @@ footer a{
 }
 
 #links3{
+    order: 3;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -193,7 +209,7 @@ svg{
     position: relative;
     width: 272px;
     min-height: 92px;
-    height: 24vh;
+    height: calc(100vh - 550px);
     max-height: 290px;
 }
 
@@ -207,11 +223,22 @@ svg{
     align-items: center;
     justify-content: center;
     background-color: var(--search-bar);
+    border: 1px solid var(--line);
     border-radius: 24px;
     width: 100%;
     max-width: 584px;
     min-width: 300px;
     height: 44px;
-    margin: 0;
+    margin: 6px 0 18px 0;
     padding: 5px;
+}
+
+input{
+    flex-grow: 1;
+    border: none;
+    background-color: transparent;
+    color: var(--text);
+    font-size: 16px;
+    margin: 11px 0;
+    padding: 0 10px;
 }
