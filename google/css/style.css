@@ -4,11 +4,6 @@
     --line: #444746;
 }
 
-@font-face{
-    font-family: Google Sans;
-    src: url(../assets/fonts/Google_Sans_Flex/GoogleSansFlex-VariableFont_ROND\,opsz\,slnt\,wdth\,wght.ttf);
-}
-
 html, body{
     margin: 0;
     padding: 0;
