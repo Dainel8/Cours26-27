@@ -2,6 +2,7 @@
     --background: #22242a;
     --text: #e8eaf2;
     --line: #444746;
+    --search-bar: #303134;
 }
 
 html, body{
@@ -194,4 +195,23 @@ svg{
     min-height: 92px;
     height: 24vh;
     max-height: 290px;
+}
+
+.core{
+    padding: 20px;
+}
+
+.search-bar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--search-bar);
+    border-radius: 24px;
+    width: 100%;
+    max-width: 584px;
+    min-width: 300px;
+    height: 44px;
+    margin: 0;
+    padding: 5px;
 }
