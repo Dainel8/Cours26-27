@@ -12,6 +12,7 @@
     --col2: #fff;
     --col3: #fff;
     --col4: #fff;
+    --search-shadow: none;
 }
 
 @media (prefers-color-scheme: light){
@@ -20,9 +21,10 @@
         --text: #16171a;
         --line: #d2d2d2;
         --search-bar: #fff;
-        --search-line: #f2f4f7;
+        --search-line: #dadce0;
+        --search-shadow: rgba(31, 31, 31, 0.08);
         --buttons-col: #f8f9fa;
-        --border-hover: #dadce0;
+        --border-hover: var(--search-line);
         --nav-svg: var(--text);
         --visited-a: purple;
         --col1: #3186ff;
@@ -129,6 +131,9 @@ header{
                 &:hover{
                     background-color: var(--search-bar);
                     transition: background-color 0.5s ease;
+                    @media (prefers-color-scheme: light){
+                        background-color: var(--search-line);
+                    }
                 }
                 svg{
                     width: 24px;
@@ -154,6 +159,9 @@ header{
                 &:hover{
                     background-color: var(--search-bar);
                     transition: background-color 0.5s ease;
+                    @media (prefers-color-scheme: light){
+                        background-color: var(--search-line);
+                    }
                 }
                 img{
                     border-radius: 16px;
@@ -224,7 +232,7 @@ main{
             background-color: var(--search-bar);
             border: 1px solid var(--search-line);
             border-radius: 25px;
-            box-shadow: 0 5px 10px 1px var(--search-line);
+            box-shadow: 0 3px 10px 0px var(--search-shadow);
             width: 678px;
             height: 50px;
             padding: 0 8px 0 0;
@@ -247,9 +255,13 @@ main{
                     border: none;
                     background-color: transparent;
                     cursor: pointer;
+                    
                     &:hover{
                         background-color: var(--search-line);
                         border-radius: 50%;
+                        @media (prefers-color-scheme: light){
+                            background-color: #f2f4f7;
+                        }
                     }
                 }
             }
@@ -295,6 +307,9 @@ main{
                     height: 36px;
                     cursor: pointer;
 
+                    @media (prefers-color-scheme: light){
+                        background-color: #f2f4f7;
+                    }
                     svg{
                         width: 20px;
                         height: 20px;
